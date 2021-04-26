@@ -7,7 +7,7 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 
-**Stackie enables developers to configure the local environment/toolchain with
+**Stackie enables developers to configure their local environment/toolchain with
 ease. Made for Pulumi CLI, Google Cloud Platform (`gcloud`), and Amazon Web
 Services (`aws-cli`).**
 
