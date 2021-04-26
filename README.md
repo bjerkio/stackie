@@ -1,7 +1,7 @@
 # Stackie
 
 <div style="text-align: center">
-    <img src="https://raw.githubusercontent.com/bjerkio/stackie/main/.github/logo.svg" alt="Stackie" style="height: 200px" />
+    <img src="https://raw.githubusercontent.com/bjerkio/stackie/main/.github/logo.svg" alt="Stackie" style="width: 150px" />
     <br /><br />
 </div>
 
