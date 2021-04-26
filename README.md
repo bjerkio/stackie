@@ -11,8 +11,9 @@
 ease. Made for Pulumi CLI, Google Cloud Platform (`gcloud`), and Amazon Web
 Services (`aws-cli`).**
 
-Stackie connects with your command line and continuously search in working
-directory for a Stackie configuration.
+Stackie changes your `pulumi`, `gcloud` and `aws-cli` actively when you change
+from project to project. Think of it as a combination of `aws-cli` and
+[`nvm`](https://nvm.sh)/[`volta`](https://volta.sh/).
 
 ## Stackie Config
 
