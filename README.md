@@ -15,6 +15,25 @@ Stackie changes your `pulumi`, `gcloud` and `aws-cli` actively when you change
 from project to project. Think of it as a combination of `aws-cli` and
 [`nvm`](https://nvm.sh)/[`volta`](https://volta.sh/).
 
+### Quickstart
+
+Imagine your in your one of your personal projects. You're using
+[Pulumi](https://pulumi.com/).
+
+```shell
+▶ pulumi whoami
+cobraz
+```
+
+You're going to start working on that Yosemite project, but instead of logging
+out of Pulumi and logging into their Pulumi account with their credentials.
+Stackie has that all stored in a configuration, so all you have to do is this:
+
+```
+▶ cd ~/projects/yosemite
+▶ pulumi whoami yosemite-system-user
+```
+
 ## Stackie Config
 
 There are three possible configuration files.
