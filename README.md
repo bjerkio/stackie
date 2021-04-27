@@ -31,7 +31,8 @@ Stackie has that all stored in a configuration, so all you have to do is this:
 
 ```
 ▶ cd ~/projects/yosemite
-▶ pulumi whoami yosemite-system-user
+▶ pulumi whoami
+yosemite-system-user
 ```
 
 ## Stackie Config
