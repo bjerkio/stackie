@@ -56,7 +56,7 @@ The personal Stackie configuration is used to store project-specific access
 tokens or setups that you need. This file should probably never be pushed to
 your repository.
 
-### Developer-sepcific configuration (`~/.config/stackie/config.yml`)
+### Developer-specific configuration (`~/.config/stackie/config.yml`)
 
 This is where your secrets are stored away. It could look like this:
 
