@@ -1,4 +1,4 @@
-package stackie
+package config
 
 import (
 	"path"
