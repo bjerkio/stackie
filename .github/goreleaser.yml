@@ -1,0 +1,38 @@
+before:
+  hooks:
+    - go mod download
+builds:
+  - main: ./cmd/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+archives:
+  - replacements:
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+      386: i386
+      amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+brews:
+  - tap:
+      owner: bjerkio
+      name: homebrew-tools
+    commit_author:
+      name: Bjerk AS
+      email: office@bjerk.io
+    homepage: https://github.com/bjerkio/stackie
+    description: Manage your DevOps configs with ease
+    folder: Formula
+snapshot:
+  name_template: '{{ .Tag }}-next'
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
