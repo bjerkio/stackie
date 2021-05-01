@@ -30,4 +30,11 @@ jobs:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: ${{ runner.os }}-go-
-      # TODO: Add goreleaser?
+      - name: Release
+        if: ${{ steps.release.outputs.release_created }}
+        uses: goreleaser/goreleaser-action@v2
+        with:
+          version: latest
+          args: release --config=.github/goreleaser.yml --rm-dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.BJERKBOT_GITHUB_TOKEN }}
