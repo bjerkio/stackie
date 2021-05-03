@@ -1,4 +1,4 @@
-package config
+package test
 
 import (
 	"path"
@@ -21,7 +21,7 @@ func TestGetConfigPath(t *testing.T) {
 
 			afero.WriteFile(fs, sf, []byte(""), 0644)
 
-			p, err := c.GetPath("project", configNames)
+			p, _, err := c.GetPath("project", configNames)
 			if err != nil {
 				t.Error(err)
 			}
@@ -43,7 +43,7 @@ func TestGetConfigPath(t *testing.T) {
 	fs := afero.NewMemMapFs()
 	fs.MkdirAll("second-project", 0755)
 
-	_, err := c.GetPath("second-project", userConfig)
+	_, _, err := c.GetPath("second-project", userConfig)
 	if err == nil {
 		t.Errorf("getConfigPath failed, expected second-project to fail")
 	}

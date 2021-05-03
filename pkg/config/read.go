@@ -2,24 +2,23 @@ package config
 
 import (
 	"encoding/json"
-	"io/ioutil"
 
+	"github.com/spf13/afero"
 	"gopkg.in/yaml.v2"
 )
 
 // Read Configuration file
 func (config *Config) Read(configPath string, fileType FileType, out interface{}) error {
-	content, err := ioutil.ReadFile(configPath)
-
+	content, err := afero.ReadFile(config.fs, configPath)
 	if err != nil {
 		return err
 	}
 
 	switch fileType {
 	case YAML:
-		err = yaml.Unmarshal(content, out)
+		err = yaml.Unmarshal(content, &out)
 	case JSON:
-		err = json.Unmarshal(content, out)
+		err = json.Unmarshal(content, &out)
 	}
 
 	if err != nil {

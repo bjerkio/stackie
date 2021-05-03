@@ -1,0 +1,7 @@
+(*stackie.Configs)({
+  UserConfig: (*stackie.UserConfig)({
+    Pulumi: ([]pulumi.PulumiUserConfig) <nil>
+  }),
+  ProjectConfig: (*stackie.ProjectConfig)(<nil>),
+  UserProjectConfig: (*stackie.UserProjectConfig)(<nil>)
+})

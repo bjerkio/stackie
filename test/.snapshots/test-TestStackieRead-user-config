@@ -1,0 +1,3 @@
+(*stackie.UserConfig)({
+  Pulumi: ([]pulumi.PulumiUserConfig) <nil>
+})

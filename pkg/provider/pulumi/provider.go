@@ -1,12 +1,16 @@
 package pulumi
 
-type PulumiProfileConfig struct {
-	AccessToken string `yaml:"access-token"`
+type PulumiStack struct {
+	StackName string
+	CloudURL  string
 }
 
-type PulumiProjectConfig struct {
-	StackName string
-	CloudURL string // A cloud URL to log in to
-	AccessToken string `yaml:"accessToken"`
-	ProfileName string `yaml:"profileName"`
+type PulumiUserProfile struct {
+	Name        string
+	AccessToken string
+}
+
+type PulumiUserConfig struct {
+	AccessToken string
+	Profiles    []PulumiUserProfile
 }
