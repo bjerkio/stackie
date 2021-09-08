@@ -1,7 +1,7 @@
-(*stackie.Configs)({
-  UserConfig: (*stackie.UserConfig)({
-    Pulumi: ([]pulumi.PulumiUserConfig) <nil>
+(*types.Configs)({
+  UserConfig: (*types.UserConfig)({
+    Pulumi: ([]types.PulumiUserConfig) <nil>
   }),
-  ProjectConfig: (*stackie.ProjectConfig)(<nil>),
-  UserProjectConfig: (*stackie.UserProjectConfig)(<nil>)
+  ProjectConfig: (*types.ProjectConfig)(<nil>),
+  UserProjectConfig: (*types.UserProjectConfig)(<nil>)
 })
