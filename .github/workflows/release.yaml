@@ -37,7 +37,7 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: ${{ runner.os }}-go-
       - name: Release
-        if: ${{ steps.release.outputs.release_created }}
+        #if: ${{ steps.release.outputs.release_created }}
         uses: goreleaser/goreleaser-action@v2
         with:
           version: latest
