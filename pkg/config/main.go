@@ -6,7 +6,7 @@ type Config struct {
 	fs afero.Fs
 }
 
-func NewConfig() Config {
+func New() Config {
 	fs := afero.NewOsFs()
 	c := Config{fs}
 	return c

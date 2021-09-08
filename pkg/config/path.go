@@ -5,14 +5,14 @@ import (
 	"path"
 )
 
-func (config *Config) GetPath(basePath string, fileNames []FileName) (string, error) {
+func (config *Config) GetPath(basePath string, fileNames []FileName) (string, *FileName, error) {
 	for _, f := range fileNames {
 		p := path.Join(basePath, f.FileName)
 		_, err := config.fs.Stat(p)
 		if err == nil {
-			return p, nil
+			return p, &f, nil
 		}
 	}
 
-	return "", fmt.Errorf("could not find configuration")
+	return "", nil, fmt.Errorf("could not find configuration")
 }

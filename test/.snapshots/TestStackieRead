@@ -1,0 +1,7 @@
+(*types.Configs)({
+  UserConfig: (*types.UserConfig)({
+    Pulumi: ([]types.PulumiUserConfig) <nil>
+  }),
+  ProjectConfig: (*types.ProjectConfig)(<nil>),
+  UserProjectConfig: (*types.UserProjectConfig)(<nil>)
+})
