@@ -1,30 +1,27 @@
 package stackie
 
 import (
+	"fmt"
 	"os"
 	"path"
 
 	"github.com/bjerkio/stackie/pkg/config"
+	"github.com/bjerkio/stackie/pkg/types"
 )
 
 const CONFIG_FOLDER = "stackie"
 const CONFIG_NAME = "stackie.yml"
 
-type Configs struct {
-	UserConfig        *UserConfig
-	ProjectConfig     *ProjectConfig
-	UserProjectConfig *UserProjectConfig
-}
-
 // e.g. ~/.config/stackie/stackie.yml
-func readUserConfig(c config.Config) (*UserConfig, error) {
-	var conf UserConfig
+func readUserConfig(c config.Config) (*types.UserConfig, error) {
+	var conf types.UserConfig
 	homeDir, err := os.UserConfigDir()
 	if err != nil {
 		return nil, err
 	}
 
 	configPath := path.Join(homeDir, CONFIG_FOLDER, CONFIG_NAME)
+	fmt.Println(configPath)
 	if !c.Exists(configPath) {
 		return nil, nil
 	}
@@ -38,8 +35,8 @@ func readUserConfig(c config.Config) (*UserConfig, error) {
 }
 
 // e.g. project/.stackie.yaml
-func readProjectConfig(c config.Config) (*ProjectConfig, error) {
-	var conf ProjectConfig
+func readProjectConfig(c config.Config) (*types.ProjectConfig, error) {
+	var conf types.ProjectConfig
 	wd, err := os.Getwd()
 	if err != nil {
 		return nil, err
@@ -59,8 +56,8 @@ func readProjectConfig(c config.Config) (*ProjectConfig, error) {
 }
 
 // e.g. project/.stackie.local.yaml
-func readUserProjectConfig(c config.Config) (*UserProjectConfig, error) {
-	var conf UserProjectConfig
+func readUserProjectConfig(c config.Config) (*types.UserProjectConfig, error) {
+	var conf types.UserProjectConfig
 	wd, err := os.Getwd()
 	if err != nil {
 		return nil, err
@@ -80,7 +77,7 @@ func readUserProjectConfig(c config.Config) (*UserProjectConfig, error) {
 }
 
 // ReadConfigs returns all possible configurations
-func ReadConfigs(c config.Config) (*Configs, error) {
+func ReadConfigs(c config.Config) (*types.Configs, error) {
 
 	UserConfig, err := readUserConfig(c)
 	if err != nil {
@@ -97,11 +94,9 @@ func ReadConfigs(c config.Config) (*Configs, error) {
 		return nil, err
 	}
 
-	confs := Configs{
+	return &types.Configs{
 		UserConfig,
 		ProjectConfig,
 		UserProjectConfig,
-	}
-
-	return &confs, nil
+	}, nil
 }

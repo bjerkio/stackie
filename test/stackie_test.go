@@ -75,7 +75,7 @@ func prepareUserProjectConfig(c config.Config, fs afero.Fs, t *testing.T) error 
 }
 
 func TestStackieRead(t *testing.T) {
-	c := config.NewConfig()
+	c := config.New()
 	fs := afero.NewMemMapFs()
 	c.SetFS(fs)
 

@@ -9,7 +9,7 @@ import (
 )
 
 func TestGetConfigPath(t *testing.T) {
-	c := config.NewConfig()
+	c := config.New()
 
 	var testConfigNames = func(configNames []config.FileName) {
 		for _, name := range configNames {

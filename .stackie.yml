@@ -1,2 +1,5 @@
-pulumi:
-  cloudUrl: gs://hello-world
+name: folio
+stacks:
+  - pulumi:
+      stackName: prodolini
+      cloudUrl: gs://hello-world

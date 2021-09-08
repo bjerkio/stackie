@@ -16,9 +16,9 @@ func (config *Config) Read(configPath string, fileType FileType, out interface{}
 
 	switch fileType {
 	case YAML:
-		err = yaml.Unmarshal(content, &out)
+		err = yaml.Unmarshal(content, out)
 	case JSON:
-		err = json.Unmarshal(content, &out)
+		err = json.Unmarshal(content, out)
 	}
 
 	if err != nil {
