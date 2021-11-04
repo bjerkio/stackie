@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/bradleyjkemp/cupaloy/v2 v2.6.0
 	github.com/pulumi/pulumi/pkg/v3 v3.11.0
-	github.com/pulumi/pulumi/sdk/v3 v3.11.0
+	github.com/pulumi/pulumi/sdk/v3 v3.17.0
 	github.com/spf13/afero v1.6.0
 	gopkg.in/yaml.v2 v2.4.0
 )
