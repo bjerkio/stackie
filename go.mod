@@ -6,7 +6,7 @@ require (
 	github.com/bradleyjkemp/cupaloy/v2 v2.6.0
 	github.com/pulumi/pulumi/pkg/v3 v3.11.0
 	github.com/pulumi/pulumi/sdk/v3 v3.11.0
-	github.com/spf13/afero v1.6.0
+	github.com/spf13/afero v1.9.5
 	gopkg.in/yaml.v2 v2.4.0
 )
 
@@ -99,13 +99,13 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	gocloud.dev v0.23.0 // indirect
 	gocloud.dev/secrets/hashivault v0.23.0 // indirect
-	golang.org/x/crypto v0.0.0-20210506145944-38f3c27a63bf // indirect
-	golang.org/x/net v0.0.0-20210505214959-0714010a04ed // indirect
+	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
+	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
 	golang.org/x/oauth2 v0.0.0-20210427180440-81ed05c6b58c // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/sys v0.0.0-20210817190340-bfb29a6856f2 // indirect
 	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
-	golang.org/x/text v0.3.6 // indirect
+	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/time v0.0.0-20210220033141-f8bda1e9f3ba // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/api v0.46.0 // indirect
