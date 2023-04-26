@@ -27,7 +27,7 @@ jobs:
       # - name: Retrieve latest tag
       #   run: echo "TAG=$(cat version.txt)" >> $GITHUB_ENV
       - name: Setup Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: ${{ env.GOLANG_VERSION }}
       - name: Setup build cache
